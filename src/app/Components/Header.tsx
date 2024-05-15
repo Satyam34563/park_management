@@ -33,8 +33,8 @@ const Header = () => {
           </Typography>
         </div>
         <div className="hidden md:flex gap-8">
-          {menu.map((item) => {
-            return <HeaderItem name={item.name} />;
+          {menu.map((item, index) => {
+            return <HeaderItem key={index} name={item.name} />;
           })}
         </div>
       </div>

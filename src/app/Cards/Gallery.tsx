@@ -87,6 +87,7 @@ const Gallery = () => {
           >
             <Image
               {...srcset(item.img, 121, item.rows, item.cols)}
+              key={index}
               alt={item.title}
               loading="lazy"
               fill
