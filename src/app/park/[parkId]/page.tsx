@@ -14,6 +14,7 @@ import ParkCardDivider from '@/app/Components/ParkCardDivider';
 import Gallery from '@/app/Cards/Gallery';
 import AboutPark from '@/app/Components/SpecificPark/AboutPark';
 import SpecificPageAbout from './SpecificPageAbout';
+import Image from 'next/image';
 
 const page = () => {
   const pathName = usePathname();
@@ -22,7 +23,13 @@ const page = () => {
   return (
     <>
       <div className="relative">
-        <img src={parkData.image} alt="" className=" w-full md:h-[70vh]" />
+        <Image
+          src={parkData.image}
+          alt="Image"
+          className=" w-full md:h-[70vh]"
+          width={400}
+          height={400}
+        />
         <div className="absolute bottom-2 left-2">
           <Typography variant="h2" className=" font-extrabold text-white">
             {parkData.name}
@@ -36,7 +43,11 @@ const page = () => {
             >
               BOOK
             </Button>
-            <Button variant="contained" color="success" className="px-8 py-2 ml-2">
+            <Button
+              variant="contained"
+              color="success"
+              className="px-8 py-2 ml-2"
+            >
               ADOPT
             </Button>
           </div>
@@ -72,8 +83,7 @@ const page = () => {
       <AboutPark />
       <ParkCardDivider subheading="" heading="Gallery" />
       <Gallery />
-      <SpecificPageAbout/>
-      
+      <SpecificPageAbout />
     </>
   );
 }

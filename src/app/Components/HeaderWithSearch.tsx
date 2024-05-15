@@ -5,17 +5,22 @@ import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import ParkData from "../Cards/ParkData";
 import Button from "@mui/material/Button";
+import Image from "next/image";
 type Props = {};
 const options: any[] = [];
 ParkData.map((data, index) => (options[index] = data.name));
 const HeaderWithSearch = (props: Props) => {
   return (
     <div className="relative">
-      <img
+      <Image
         className="w-full h-[33vh] md:h-[60vh]"
         src="https://wallpapercave.com/wp/wp11440140.jpg"
         alt=""
+        // fill  
+        width={400}
+        height={400}
       />
+
       <div className="opacity-100 md:absolute bottom-2 mt-4 md:mt-0  ">
         <Typography className="self-center text-white font-extrabold text-center text-3xl bg-slate-500">
           PARKS OF IITR

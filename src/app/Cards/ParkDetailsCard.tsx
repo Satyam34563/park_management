@@ -10,6 +10,7 @@ import Grid from "@mui/material/Grid";
 import PlaceIcon from "@mui/icons-material/Place";
 import Rating from "@mui/material/Rating";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
 interface ParkDetailsProps {
   name:string,
   image:string,
@@ -25,10 +26,12 @@ const ParkDetailsCard:React.FC<ParkDetailsProps>=(props)=> {
   return (
     <Card sx={{ maxWidth: 345, minWidth: 345, height: 450 }}>
       <div className="relative">
-        <img
+        <Image
           className=" w-full h-[190px]"
           src={props.image}
           alt={props.location}
+          width={200}
+          height={200}
         />
         <Avatar className="w-16 h-16 absolute bottom-[-20px] left-3">
           <AvatarImage src="https://th.bing.com/th/id/OIP.zhdEnlzXf8V5Bja6mIB2fgHaHa?w=180&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" />

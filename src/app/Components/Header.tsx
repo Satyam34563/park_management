@@ -1,7 +1,7 @@
 import HeaderItem from '../Cards/HeaderItem';
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-
+import Image from "next/image";
 const Header = () => {
     const menu = [
       {
@@ -21,10 +21,12 @@ const Header = () => {
     <div className="flex gap-8 justify-between">
       <div className="flex gap-12">
         <div className="flex align-middle gap-2">
-          <img
+          <Image
             src="https://management.ind.in/img/o/IIT-Roorkee-Symbol-2.png"
             className="w-[80px] md:w-[80px] object-cover"
             alt=""
+            width={80}
+            height={80}
           />
           <Typography className="self-center font-serif text-xl font-semibold">
             IITR Travels
@@ -36,7 +38,11 @@ const Header = () => {
           })}
         </div>
       </div>
-      <Button variant="contained" size="small" className=' h-min px-8 py-2 self-center'>
+      <Button
+        variant="contained"
+        size="small"
+        className=" h-min px-8 py-2 self-center"
+      >
         Login
       </Button>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import Image from 'next/image';
 function srcset(image: string, size: number, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -71,23 +72,24 @@ const itemData = [
 ];
 const Gallery = () => {
   return (
-    <div className='w-full'>
+    <div className="w-full">
       <ImageList
         className=" md:w-[60vw] h-[60vh] md:ml-[20vw]"
         variant="quilted"
         cols={4}
         rowHeight={121}
       >
-        {itemData.map((item) => (
+        {itemData.map((item, index) => (
           <ImageListItem
-            key={item.img}
+            key={index}
             cols={item.cols || 1}
             rows={item.rows || 1}
           >
-            <img
+            <Image
               {...srcset(item.img, 121, item.rows, item.cols)}
               alt={item.title}
               loading="lazy"
+              fill
             />
           </ImageListItem>
         ))}

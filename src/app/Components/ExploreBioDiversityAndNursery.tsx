@@ -3,17 +3,18 @@ import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography';
 import React from 'react'
 import DividerComponent from './DividerComponent';
-
+import Image from 'next/image';
 const ExploreBioDiversityAndNursery = () => {
   return (
     <div>
       <Grid container>
         <Grid item xs={12} sm={6}>
           <div className=" relative">
-            <img
+            <Image
               src="https://media.greenmatters.com/brand-img/IAh_ipPAS/0x0/wildlife-1586888387645.jpg"
               className=" w-full h-80"
               alt=""
+              fill
             />
             <div className="grid place-items-center">
               <div className=" absolute top-0 text-center w-full h-full grid place-items-center">
@@ -38,10 +39,11 @@ const ExploreBioDiversityAndNursery = () => {
         </Grid>
         <Grid item xs={12} sm={6}>
           <div className=" relative">
-            <img
+            <Image
               src="https://media.timeout.com/images/103951638/image.jpg"
               className=" w-full h-80"
               alt=""
+              fill
             />
             <div className="grid place-items-center">
               <div className=" absolute top-0 text-center w-full h-full grid place-items-center">
