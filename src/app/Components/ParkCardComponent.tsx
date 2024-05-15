@@ -4,8 +4,9 @@ import ParkData from "../Cards/ParkData";
 const ParkCardComponent = () => {
   return (
     <div className="flex gap-2 overflow-x-auto scrollbar-none">
-      {ParkData.map((i) => (
+      {ParkData.map((i, index) => (
         <ParkDetailsCard
+          key={index}
           image={i.image}
           current_status={i.current_status}
           weeks={i.weeks}

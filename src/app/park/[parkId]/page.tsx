@@ -16,7 +16,7 @@ import AboutPark from '@/app/Components/SpecificPark/AboutPark';
 import SpecificPageAbout from './SpecificPageAbout';
 import Image from 'next/image';
 
-const page = () => {
+const SpecificPage = () => {
   const pathName = usePathname();
   const parkId = pathName.split("/")[2];
   const parkData = ParkData[parseInt(parkId)-1];
@@ -88,4 +88,4 @@ const page = () => {
   );
 }
 
-export default page
+export default SpecificPage;
